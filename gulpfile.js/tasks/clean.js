@@ -13,7 +13,4 @@ var cleanTaskBuild = function () {
 gulp.task('clean:serve', cleanTaskServe)
 gulp.task('clean:build', cleanTaskBuild)
 
-module.exports = {
-    'clean:serve':cleanTaskServe,
-    'clean:build':cleanTaskBuild
-}
+module.exports = cleanTaskServe

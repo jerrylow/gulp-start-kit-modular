@@ -8,7 +8,7 @@ var requireGlob  = require('require-glob')
 var $            = require('gulp-load-plugins')();
 
 var paths = {
-  src: path.join(config.root.src, config.tasks.html.nunjucks.pages, '/**/*.nunjucks'),
+  src: path.join(config.root.src, config.tasks.html.nunjucks.pages, '/**/*.njk'),
   buildDest: config.root.buildDest,
   serveDest: config.root.serveDest,
   partials: path.join(config.root.src, config.tasks.html.nunjucks.partials),
@@ -51,7 +51,5 @@ var htmlTaskBuild = function () {
 
 gulp.task('html:serve', htmlTaskServe)
 gulp.task('html:build', htmlTaskBuild)
-module.exports = {
-  'html:serve':htmlTaskServe,
-  'html:build':htmlTaskBuild
-}
+
+module.exports = htmlTaskServe

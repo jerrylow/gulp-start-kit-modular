@@ -38,7 +38,7 @@
     "html": {
       "src":"./",
       "dest":"./",
-      "extensions": ["nunjucks", "html"],
+      "extensions": ["njk", "html"],
       "nunjucks":{
         "partials":"markup/partials",
         "pages":"markup/pages",
@@ -54,6 +54,11 @@
         "bundleName":"bundle.js",
         "debug":true
       }
+    },
+    "images": {
+      "src": "images",
+      "dest": "images",
+      "extensions": ["svg", "png", "jpg"]
     }
   }
 }

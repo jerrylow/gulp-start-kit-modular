@@ -28,7 +28,5 @@ var staticTaskBuild = function() {
 
 gulp.task('static:serve', staticTaskServe)
 gulp.task('static:build', staticTaskBuild)
-module.exports = {
-    'static:serve':staticTaskServe,
-    'static:build':staticTaskBuild
-}
+
+module.exports = staticTaskServe

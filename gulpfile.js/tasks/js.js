@@ -8,6 +8,7 @@ var browserSync  = require('browser-sync')
 var buffer       = require('vinyl-buffer')
 var path         = require('path')
 var source       = require('vinyl-source-stream')
+var glob         = require('glob')
 var $            = require('gulp-load-plugins')();
 
 var paths = {
@@ -18,8 +19,10 @@ var paths = {
 }
 
 var scriptsTaskBase = function() {
+  var jsFiles = glob.sync(config.root.src + '/js/**/*.js');
+
   return browserify({
-      "entries": paths.entries,
+      "entries": jsFiles,
       "debug":config.tasks.js.browserify.debug
     })
     .transform("babelify")
@@ -45,8 +48,5 @@ var scriptsTaskBuild = function() {
 
 gulp.task('js:serve', scriptsTaskServe);
 gulp.task('js:build', scriptsTaskBuild);
-module.exports = {
-  'js:serve':scriptsTaskServe,
-  'js:build':scriptsTaskBuild
-}
 
+module.exports = scriptsTaskServe

@@ -1,0 +1,30 @@
+/*
+ * Global
+ */
+
+body {
+  @include font-size(18);
+}
+
+main {
+  padding: 0;
+
+  @include respond-to(sm) {
+    padding: 0;
+  }
+}
+
+img {
+	height: auto;
+	max-width: 100%;
+	page-break-inside: avoid;
+	-ms-interpolation-mode: bicubic;
+}
+
+.clearfix:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}

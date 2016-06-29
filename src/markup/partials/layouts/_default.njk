@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {% block head %}
+      {% include "_head.njk" %}
+      <title>Title | {{ frontMatter.title }}</title>
+    {% endblock %}
+  </head>
+
+  <body>
+    {% block header %}
+      {% include "headers/_default.njk" %}
+    {% endblock %}
+
+    {% block body %}
+    {% endblock %}
+
+    {% block footer %}
+      {% include "footers/_default.njk" %}
+    {% endblock %}
+
+    {% block foot %}
+      {% include "_foot.njk" %}
+    {% endblock %}
+  </body>
+</html>

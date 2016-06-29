@@ -38,7 +38,4 @@ var cssTaskBuild = function () {
 gulp.task('css:serve', cssTaskTemp)
 gulp.task('css:build', cssTaskBuild)
 
-module.exports = {
-  'css:serve':cssTaskTemp,
-  'css:build':cssTaskBuild
-}
+module.exports = cssTaskTemp
